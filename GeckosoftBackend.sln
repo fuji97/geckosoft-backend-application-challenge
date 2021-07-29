@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckosoftBackend", "GeckosoftBackend\GeckosoftBackend.csproj", "{AC9B99BF-D5B8-4C79-9437-C87DEFD27B6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckosoftBackend.Tests", "GeckosoftBackend.Tests\GeckosoftBackend.Tests.csproj", "{9EBDC6B3-0CE6-4E9D-A184-F0E973CE1DC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC9B99BF-D5B8-4C79-9437-C87DEFD27B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9B99BF-D5B8-4C79-9437-C87DEFD27B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9B99BF-D5B8-4C79-9437-C87DEFD27B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9B99BF-D5B8-4C79-9437-C87DEFD27B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBDC6B3-0CE6-4E9D-A184-F0E973CE1DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBDC6B3-0CE6-4E9D-A184-F0E973CE1DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBDC6B3-0CE6-4E9D-A184-F0E973CE1DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBDC6B3-0CE6-4E9D-A184-F0E973CE1DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
