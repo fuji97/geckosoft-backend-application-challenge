@@ -24,6 +24,11 @@ namespace GeckosoftBackend.Controllers {
             public IFormFile File { get; set; }
         }
 
+        /// <summary>
+        /// Upload an image.
+        /// </summary>
+        /// <param name="file">File to upload</param>
+        /// <returns>Name and URL of the uploaded image</returns>
         [HttpPost()]
         public async Task<ActionResult> UploadImage([FromForm] FIleUploadAPI file) {
             if (file.File.Length > 0) {
@@ -37,12 +42,21 @@ namespace GeckosoftBackend.Controllers {
             }
         }
 
+        /// <summary>
+        /// Get the alphabetical sorted list of all uploaded images.
+        /// </summary>
+        /// <returns>List of name and URL of the images.</returns>
         [HttpGet()]
         public async Task<ActionResult> GetAllImages() {
             var allImages = _imagesManager.GetAllImages();
             return Ok(allImages);
         }
 
+        /// <summary>
+        /// Delete an uploaded image.
+        /// </summary>
+        /// <param name="name">Name of the image to delete.</param>
+        /// <returns>Name and URL of the uploaded image.</returns>
         [HttpDelete("{name}")]
         public async Task<ActionResult> DeleteImage(string name) {
             if (!_imagesManager.FileExists(name)) {
@@ -55,6 +69,15 @@ namespace GeckosoftBackend.Controllers {
             return Ok(result);
         }
 
+        /// <summary>
+        /// Resize an image. If passing a callback URL, the URL will be called after the completion of the operation.
+        /// If callbackUrl is left null the operation will be synchronous.
+        /// </summary>
+        /// <param name="name">Name of the image to resize</param>
+        /// <param name="width">New width of the image in pixels</param>
+        /// <param name="height">New height of the image in pixels</param>
+        /// <param name="callbackUrl">Callback to call after the operation</param>
+        /// <returns>Name and URl of the resized image</returns>
         [HttpPut]
         public async Task<ActionResult> ResizeImage([FromForm] string name, 
             [FromForm] int width, 
