@@ -17,4 +17,5 @@ RUN dotnet publish "GeckosoftBackend.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+RUN mkdir -p wwwroot/files
 ENTRYPOINT ["dotnet", "GeckosoftBackend.dll"]
